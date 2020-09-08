@@ -478,6 +478,7 @@ call s:h("phpMagicConstants", { "fg": s:dark_yellow })
 call s:h("phpSuperglobals", { "fg": s:red })
 call s:h("phpConstants", { "fg": s:dark_yellow })
 call s:h("phpTodo", { "fg": s:orange })
+call s:h("phpVarSelectorThis", { "fg": s:yellow })
 
 " Ruby
 call s:h("rubyBlockParameter", { "fg": s:red})
