@@ -243,7 +243,7 @@ call s:h("MatchParen", { "fg": s:blue, "gui": "underline", "cterm": "underline" 
 call s:h("ModeMsg", {}) " 'showmode' message (e.g., "-- INSERT --")
 call s:h("MoreMsg", {}) " more-prompt
 call s:h("NonText", { "fg": s:special_grey }) " '~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
-if (get(g:, 'onedark_transparent_background', 0))
+if g:onedark_transparent_background == 1
     call s:h("Normal", { "fg": s:white })
 else
     call s:h("Normal", { "fg": s:white, "bg": s:black }) " normal text

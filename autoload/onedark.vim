@@ -30,13 +30,13 @@ function! onedark#GetColors()
 endfunction
 
 function! onedark#ToggleTransparent()
-  if (get(g:, 'onedark_transparent_background', 0))
+  if g:onedark_transparent_background == 0
     hi Normal guibg=NONE ctermbg=NONE
 
-    let g:onedark_transparent_background = 0
+    let g:onedark_transparent_background = 1
   else
     hi Normal guibg=#282C34 ctermbg=235
 
-    let g:onedark_transparent_background = 1
+    let g:onedark_transparent_background = 0
   endif
 endfunction
