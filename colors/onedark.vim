@@ -67,6 +67,10 @@ if !exists("g:onedark_terminal_italics")
   let g:onedark_terminal_italics = 0
 endif
 
+if !exists("g:onedark_transparent_background")
+  let g:onedark_transparent_background = 0
+endif
+
 " This function is based on one from FlatColor: https://github.com/MaxSt/FlatColor/
 " Which in turn was based on one found in hemisu: https://github.com/noahfrederick/vim-hemisu/
 let s:group_colors = {} " Cache of default highlight group settings, for later reference via `onedark#extend_highlight`

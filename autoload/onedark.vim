@@ -37,6 +37,6 @@ function! onedark#ToggleTransparent()
   else
     hi Normal guibg=#282C34 ctermbg=235
 
-    let g:onedark_transparent_background = 0
+    let g:onedark_transparent_background = 1
   endif
 endfunction
