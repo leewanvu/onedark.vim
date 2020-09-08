@@ -150,6 +150,8 @@ let s:visual_grey = s:colors.visual_grey
 let s:menu_grey = s:colors.menu_grey
 let s:special_grey = s:colors.special_grey
 let s:vertsplit = s:colors.vertsplit
+let s:orange = s:colors.orange
+let s:comment_grey2 = s:colors.comment_grey2
 
 " }}}
 
@@ -226,7 +228,7 @@ if get(g:, 'onedark_hide_endofbuffer', 0)
     call s:h("EndOfBuffer", { "fg": s:black }) " filler lines (~) after the last line in the buffer
 endif
 call s:h("ErrorMsg", { "fg": s:red }) " error messages on the command line
-call s:h("VertSplit", { "fg": s:vertsplit }) " the column separating vertically split windows
+call s:h("VertSplit", { "fg": s:black }) " the column separating vertically split windows
 call s:h("Folded", { "fg": s:comment_grey }) " line used for closed folds
 call s:h("FoldColumn", {}) " 'foldcolumn'
 call s:h("SignColumn", {}) " column where signs are displayed
@@ -449,23 +451,29 @@ call s:h("perlVarPlain",{ "fg": s:blue })
 
 " PHP
 call s:h("phpVarSelector", { "fg": s:red })
-call s:h("phpOperator", { "fg": s:white })
+call s:h("phpOperator", { "fg": s:blue })
 call s:h("phpParent", { "fg": s:white })
 call s:h("phpMemberSelector", { "fg": s:white })
 call s:h("phpType", { "fg": s:purple })
 call s:h("phpKeyword", { "fg": s:purple })
 call s:h("phpClass", { "fg": s:yellow })
-call s:h("phpUseClass", { "fg": s:white })
-call s:h("phpUseAlias", { "fg": s:white })
+call s:h("phpClassNamespaceSeparator", { "fg": s:yellow })
+call s:h("phpClassExtends", { "fg": s:yellow })
+call s:h("phpUseClass", { "fg": s:yellow })
+call s:h("phpUseAlias", { "fg": s:yellow })
+call s:h("phpUseNamespaceSeparator", { "fg": s:yellow })
 call s:h("phpInclude", { "fg": s:purple })
 call s:h("phpClassExtends", { "fg": s:green })
-call s:h("phpDocTags", { "fg": s:white })
+call s:h("phpDocTags", { "fg": s:comment_grey })
+call s:h("phpDocParam", { "fg": s:comment_grey })
+call s:h("phpDocNamespaceSeparator", { "fg": s:comment_grey })
 call s:h("phpFunction", { "fg": s:blue })
 call s:h("phpFunctions", { "fg": s:cyan })
-call s:h("phpMethodsVar", { "fg": s:dark_yellow })
+call s:h("phpMethodsVar", { "fg": s:red })
 call s:h("phpMagicConstants", { "fg": s:dark_yellow })
 call s:h("phpSuperglobals", { "fg": s:red })
 call s:h("phpConstants", { "fg": s:dark_yellow })
+call s:h("phpTodo", { "fg": s:orange })
 
 " Ruby
 call s:h("rubyBlockParameter", { "fg": s:red})
@@ -553,7 +561,7 @@ call s:h("EasyMotionShade",  { "fg": s:comment_grey })
 
 " mhinz/vim-signify
 call s:h("SignifySignAdd", { "fg": s:green })
-call s:h("SignifySignChange", { "fg": s:yellow })
+call s:h("SignifySignChange", { "fg": s:blue})
 call s:h("SignifySignDelete", { "fg": s:red })
 
 " neomake/neomake
