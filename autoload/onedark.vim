@@ -28,3 +28,15 @@ let s:colors = {
 function! onedark#GetColors()
   return s:colors
 endfunction
+
+function! onedark#ToggleTransparent()
+  if (get(g:, 'onedark_transparent_background', 0))
+    hi Normal guibg=NONE ctermbg=NONE
+
+    let g:onedark_transparent_background = 0
+  else
+    hi Normal guibg=s:colors.black.gui ctermbg=s:colors.black.cterm
+
+    let g:onedark_transparent_background = 0
+  endif
+endfunction
